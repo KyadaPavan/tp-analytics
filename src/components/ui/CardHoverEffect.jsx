@@ -8,7 +8,10 @@ export const HoverEffect = ({ items = [], className = "" }) => {
 
   return (
     <>
-      <div className="text-5xl text-[#886DFE] font-semibold mx-auto mt-10 text-center">
+      <div
+        className="text-5xl text-[#4b3f95] font-semibold mx-auto mt-10 text-center"
+        id="services"
+      >
         Resources to get you started
       </div>
 

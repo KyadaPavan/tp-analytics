@@ -10,6 +10,8 @@ import { useEffect } from "react";
 import MarketingAnalytics from "./components/MarketingAnalytics";
 import { HoverEffect } from "./components/ui/CardHoverEffect";
 import { BrowserRouter as Router } from "react-router-dom";
+import Connection from "./components/Connection";
+import ProcessSteps from "./components/ProcessSteps";
 function App() {
   // useEffect(() => {
   //   const handleContextMenu = (e) => {
@@ -35,7 +37,7 @@ function App() {
   const cardData = [
     {
       category: "EXCLUSIVE OFFER",
-      title: "Free SOW",
+      title: "Free Scope of Work (SOW)",
       description:
         "Get a professionally crafted Scope of Work (SOW) document for free and simplify your project planning.",
       linkText: "Claim Now",
@@ -50,14 +52,6 @@ function App() {
       link: "#",
     },
     {
-      category: "LIMITED TIME DEAL",
-      title: "Free First Milestone Completion Offer",
-      description:
-        "Start your project risk-free! We’ll complete your first milestone at no cost to ensure top-quality service.",
-      linkText: "Avail Now",
-      link: "#",
-    },
-    {
       category: "SEO REPORT",
       title: "Free SEO Report",
       description:
@@ -66,8 +60,8 @@ function App() {
       link: "#",
     },
     {
-      category: "SOCIAL MEDIA STRATEGY",
-      title: "Free Social Media Strategy Report",
+      category: "SOCIAL MEDIA AUDIT",
+      title: "Free Social Media AUDIT Report",
       description:
         "Boost your brand’s online presence with expert social media strategy insights tailored for your business.",
       linkText: "Explore Now",
@@ -97,6 +91,38 @@ function App() {
       linkText: "Start Now",
       link: "#",
     },
+    {
+      category: "BUSINESS STRATEGY",
+      title: "Free Business Proposal",
+      description:
+        "Get a professionally crafted business proposal to attract investors and secure potential clients.",
+      linkText: "Start Now",
+      link: "#",
+    },
+    {
+      category: "BRAND IDENTITY",
+      title: "Free Company Profile Proposal",
+      description:
+        "Receive a tailored company profile proposal to showcase your brand’s strengths and credibility.",
+      linkText: "Start Now",
+      link: "#",
+    },
+    {
+      category: "WEB DEVELOPMENT",
+      title: "Free Website Development Proposal",
+      description:
+        "Obtain a detailed website development proposal to enhance your online presence and user experience.",
+      linkText: "Start Now",
+      link: "#",
+    },
+    {
+      category: "DIGITAL MARKETING",
+      title: "Free Content Marketing Strategy",
+      description:
+        "Gain a strategic content marketing plan to boost engagement and grow your brand’s digital reach.",
+      linkText: "Start Now",
+      link: "#",
+    },
   ];
 
   return (
@@ -111,7 +137,8 @@ function App() {
             <div>
               <HoverEffect items={cardData} />
             </div>
-
+            <Connection />
+            <ProcessSteps />
             <div className="bg-white">
               <FAQ />
             </div>

@@ -3,7 +3,13 @@ import { motion } from "framer-motion";
 
 const MarketingAnalytics = () => {
   const [companySize, setCompanySize] = useState(null);
-
+  const buttonVariants = {
+    hover: {
+      scale: 1.05,
+      backgroundColor: "#6A33D4",
+      transition: { duration: 0.3, type: "tween" },
+    },
+  };
   return (
     <div
       className="min-h-screen flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-[#1D0C41] via-[#3B1E64] to-[#0B0033]
@@ -11,8 +17,8 @@ const MarketingAnalytics = () => {
     >
       {/* Left Section */}
       <div className="max-w-lg mb-10 text-center text-white md:text-left md:mb-0">
-        <h1 className="mb-4 text-5xl font-semibold">
-          Trustopay Marketing Analytics
+        <h1 className="mb-4 text-5xl font-semibold ">
+          Trustopay Patnership Program
         </h1>
         <p className="mt-10 text-lg text-white/80">
           Combine your marketing & product data to understand the full user
@@ -29,7 +35,7 @@ const MarketingAnalytics = () => {
               <input
                 type="text"
                 placeholder="First name"
-                className="w-full p-3 border rounded-full focus:outline-none focus:ring-2 focus:ring-[#896DFF]"
+                className="w-full p-3 border rounded-full focus:outline-none focus:ring-2 focus:ring-[#1D0C41]"
               />
             </div>
             <div>
@@ -37,7 +43,7 @@ const MarketingAnalytics = () => {
               <input
                 type="text"
                 placeholder="Last name"
-                className="w-full p-3 border rounded-full focus:outline-none focus:ring-2 focus:ring-[#896DFF]"
+                className="w-full p-3 border rounded-full focus:outline-none focus:ring-2 focus:ring-[#1D0C41]"
               />
             </div>
             <div className="md:col-span-2">
@@ -45,15 +51,15 @@ const MarketingAnalytics = () => {
               <input
                 type="email"
                 placeholder="you@mail.com"
-                className="w-full p-3 border rounded-full focus:outline-none focus:ring-2 focus:ring-[#896DFF]"
+                className="w-full p-3 border rounded-full focus:outline-none focus:ring-2 focus:ring-[#1D0C41]"
               />
             </div>
             <div className="md:col-span-2">
               <label className="block mb-1 text-gray-700">Phone number</label>
               <input
                 type="text"
-                placeholder="123-555-555"
-                className="w-full p-3 border rounded-full focus:outline-none focus:ring-2 focus:ring-[#896DFF]"
+                placeholder="12345 67890"
+                className="w-full p-3 border rounded-full focus:outline-none focus:ring-2 focus:ring-[#1D0C41]"
               />
             </div>
           </div>
@@ -69,7 +75,7 @@ const MarketingAnalytics = () => {
                   whileTap={{ scale: 0.95 }}
                   className={`w-full p-3 border rounded-full transition-all ${
                     companySize === size
-                      ? "bg-[#896DFF] text-white"
+                      ? "bg-[#1D0C41] text-white"
                       : "bg-gray-100 text-gray-700 hover:bg-[#EDEAFF]"
                   }`}
                   onClick={() => setCompanySize(size)}
@@ -80,24 +86,12 @@ const MarketingAnalytics = () => {
             </div>
           </div>
 
-          {/* Terms & Privacy */}
-          <p className="mt-4 text-xs text-gray-500">
-            By clicking "Get in Touch" I agree to the{" "}
-            <a href="#" className="text-[#896DFF]">
-              Terms of Use
-            </a>{" "}
-            and the{" "}
-            <a href="#" className="text-[#896DFF]">
-              Privacy Statement
-            </a>
-            .
-          </p>
-
           {/* Submit Button */}
+
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-6 bg-[#896DFF] text-white text-lg font-semibold py-3 rounded-full w-full"
+            variants={buttonVariants}
+            whileHover="hover"
+            className="mt-4 py-4 overflow-hidden text-white rounded-full bg-[#1D0C41] shadow-md font-semibold text-base w-full"
           >
             Get in Touch
           </motion.button>
