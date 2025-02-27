@@ -13,7 +13,7 @@ const MarketingAnalytics = () => {
   return (
     <div
       className="min-h-screen flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-[#1D0C41] via-[#3B1E64] to-[#0B0033]
- px-6 md:px-20 py-12"
+ px-6 md:px-20 py-12 pt-20 md:pt-0"
     >
       {/* Left Section */}
       <div className="max-w-lg mb-10 text-center text-white md:text-left md:mb-0">
